@@ -1,1 +1,11 @@
-Hello World
+Python WRF Counter is a simple python function that uses WRF log files to determine the amount of time taken for WRF to execute. Useful for finding computational efficiency of WRF schemes. Copy and paste the function then use in your code:
+sumtime=wrftime(,numCPU)
+
+Where numCPU is the number of CPU's used for execution.
+
+This can also be combined with the datetime module to convert the output in seconds to an output in hours:
+import datetime
+sumtime=wrftime(,numCPU)
+print str(datetime.timedelta(seconds=sumtime))
+
+
